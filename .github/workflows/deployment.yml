@@ -1,5 +1,15 @@
 name: deploy frontend s3+cloudfront
 on:
- push: 
-  branches: [ main ]
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: checkout node
+        uses: actions/checkout@v6.0.2
+
+      - name: 
+ 
