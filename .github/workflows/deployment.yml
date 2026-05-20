@@ -11,5 +11,11 @@ jobs:
       - name: checkout node
         uses: actions/checkout@v6.0.2
 
-      - name: 
+      - name: Configure aws credintials
+        uses: aws-actions/configure-aws-credentials@v6.1.1
+        with:
+          aws-access-key-id: ${{ ACCESS_KEY }}
+          aws-secret-access-key: ${{ SECRET_KEY }}
+          aws-region: ${{ AWS_REGION }}
+          
  
